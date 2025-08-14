@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="ledger">
+            <h1>Income Expense Calculator</h1>
+            <h4>Your Balance</h4>
+            <h1 id="balance">₹ 0.00</h1>
+            <div class="filter">
+                <label><input type="radio" name="filter" value="all" checked>All</label>
+                <label><input type="radio" name="filter" value="income">Income</label>
+                <label><input type="radio" name="filter" value="expense">Expense</label>
+            </div>
+
+            <div class="exp-container">
+                <div class="inc">
+                    <h4>Income</h4>
+                    <p id="inc-amt" class="amt plus">₹ 0.00</p>
+                </div>
+                <div class="exp">
+                    <h4>Expense</h4>
+                    <p id="exp-amt" class="amt minus">₹ 0.00</p>
+                </div>
+
+            </div>
+            <form action="#" id="form">
+                <div class="form-control">
+                    <label for="desc">Description</label>
+                    <input type="text" id="desc" placeholder="Enter Description" />
+                </div>
+                <div class="form-control">
+                    <label for="amount">Amount</label>
+                    <input type="text" id="amount" placeholder="Enter Amount" />
+                </div>
+                <button class="btn" type="submit">Add Trtansaction</button>
+                <button class="btn btn-reset" type="button" id="reset-btn">Reset</button>
+            </form>
+
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Amount</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+            </tbody>
+        </table>
+
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

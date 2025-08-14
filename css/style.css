@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Source Sans 3", sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: azure;
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    width: 1100px;
+    height: 750px;
+    background-color: white;
+    box-sizing: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    display: flex;
+}
+
+.ledger {
+    background-color: black;
+    padding: 20px;
+    flex: 1;
+    color: #fff;
+}
+
+.ledger h1,
+.ledger h2,
+.ledger h4 {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.ledger h1 {
+    text-transform: uppercase;
+    color: #feca57;
+    font-size: 22px;
+}
+
+.ledger h4 {
+    font-size: 22px;
+}
+
+.exp-container div {
+    display: flex;
+    padding: 20px;
+    gap: 10px;
+    width: 400px;
+
+}
+
+.exp-container div {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px;
+    font-size: 18px;
+    flex: 1;
+    border-radius: 2px;
+}
+
+.exp-container div p {
+    font-size: 22px;
+}
+
+.exp-container div.inc {
+    color: #fff;
+    border: 3px solid #1dd1a1;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    background-color: blue;
+
+}
+
+.exp-container div.exp {
+    font-size: 22px;
+    color: #fff;
+    border: 3px solid #ee5253;
+    font-weight: 400;
+    font-size: 15px;
+    text-transform: capitalize;
+    background-color: red;
+
+}
+
+#form {
+    margin-top: 20px;
+    padding: 5px;
+}
+
+.form-control {
+    margin-top: 10px;
+}
+
+label {
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: 400;
+    display: inline-block;
+}
+
+input[type="text"],
+input[type="number"] {
+    display: block;
+    border: 1px solid #dedede;
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    outline: none;
+    border-radius: 2px;
+}
+
+.btn {
+    background-color: #2e86de;
+    color: white;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    border: 0;
+    font-weight: 400;
+    margin-top: 15px;
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 13px;
+}
+
+.btn-reset {
+    color: #fff;
+    background-color: rgb(19, 223, 84);
+}
+
+.transaction {
+    flex: 1;
+    flex-direction: column;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* margin-bottom: 10px; */
+
+}
+
+thead {
+    background-color: #eaeaea;
+}
+
+th,
+td {
+    padding: 6px 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+#table-body td {
+    padding: 3px 8px;
+    line-height: 1.5;
+    font-size: 13px;
+}
+
+.btn-action {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 5px;
+
+}
+
+.btn-edit {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-delete {
+    background-color: #ec1111;
+    color: white;
+}
+
+.filter {
+    display: flex;
+    margin-bottom: 15px;
+    /* width: 100%; */
+    justify-content: center;
+    gap: 20px;
+}
+
+.filter label {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media(max-width:784px) {
+    .container {
+        flex-direction: column;
+        padding: 12px;
+        /* height: 500px; */
+        scrollbar-width: 100px;
+        /* overflow-y: auto; */
+    }
+
+    .ledger {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .transaction {
+        padding: 10px;
+        width: 100%;
+        overflow-x: auto;
+        display: block;
+    }
+
+    .table {
+        min-width: 400px;
+        font-size: 14px;
+        width: 100%;
+    }
+
+    th,
+    td {
+        padding: 6px 6px;
+    }
+
+    .btn,
+    .btn-reset {
+        font-size: 16px;
+        width: 380px;
+
+    }
+
+    .filter {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .exp-container div {
+        width: 100%;
+        flex-direction: column;
+        padding: 8px;
+        font-size: 10px;
+    }
+
+    .exp-container div.inc {
+        color: #fff;
+        border: 3px solid #1dd1a1;
+        margin-bottom: 10px;
+        text-transform: capitalize;
+        background-color: blue;
+        width: 350px;
+        height: 100px;
+    }
+
+    .exp-container div.exp {
+        color: #fff;
+        border: 3px solid #ee5253;
+        font-weight: 400;
+        text-transform: capitalize;
+        background-color: red;
+        width: 350px;
+        height: 100px;
+    }
+
+    label {
+        margin: 10px 0;
+        font-size: 18px;
+        font-weight: 400;
+        display: inline-block;
+        width: 350px;
+    }
+
+    #form {
+        margin-top: 20px;
+        padding: 5px;
+        width: 390px;
+    }
+}
